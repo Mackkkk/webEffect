@@ -1,0 +1,61 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+  .aniContainer{
+    margin: 100px auto;
+    width: 1200px;
+    height: 400px;
+    background: #fff;
+    position: relative;
+  }
+  .cube-topCoin{
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  .coin{
+    display: block;
+    position: absolute;
+    background: no-repeat;
+    background-size: 100%;
+    opacity: 1;
+  }
+  .top_to_bottomY{
+    animation: topToBottomY ease-out;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+  }
+  .top_to_bottomX{
+    animation: topToBottomX ease-out;
+    animation-play-state: paused;
+    animation-iteration-count: infinite;
+  }
+  @keyframes topToBottomX{
+    0%{
+      transform: translateY(-100%) rotateY(0deg) ;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(400px) rotateY(720deg);
+      opacity: 0;
+    }
+  }
+  @keyframes topToBottomY{
+    0%{
+      transform: translateY(-100%) rotateX(0deg) ;
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      transform: translateY(400px) rotateX(720deg);
+      opacity: 0;
+    }
+  }
