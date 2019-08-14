@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Vue原理浅析</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+  <div id='app'>
+    <p>Vue原理解析</p>
+    <!-- 表达式解析,数据绑定 -->
+    <p>表达式解析,数据绑定:</p>
+    <p>JSON.stringify/parse:{{JSON.stringify(child)}}</p>
+    <p>eval:{{eval("text + ' word ' +  child.child.text")}}</p>
+    <!-- 计算属性 -->
+    <p>计算属性：{{computeText}}</p>
+    <p>计算属性get方法：{{getText}}</p>
+    <!-- 双向数据绑定 -->
+    <p>双向数据绑定【text】：<input type="text" v-model="text"></p>
+    <!-- style -->
+    <p :style="style">style：{{JSON.stringify(style)}}</p>
+    <!-- 事件绑定 -->
+    <p @click='numAdd(2,3,$event)'>
+      事件：<span :style='{cursor:"pointer",color: blueColor}' v-on:click="text = '' ">清空text</span>
+      <span>{{num}}</span>
+    </p>
+    <!-- class -->
+    <p class="pointer no-select" :class="[isRed?'red': 'blue', 'bigFont']" @click="isRed = !isRed">class: {{text}}</p>
+    <!-- 指令 -->
+    <!-- v-html -->
+    <p>v-html：<span v-html='strHtml'></span></p>
+    <!-- v-for -->
+    v-for:【list】 <span @click='addList'>向list数组添加数据</span>
+    <ul>
+      <li v-for='(item,index) in list'>{{list}}</li>
+    </ul>
+  </div>
+</body>
+
+</html>
+<style type="text/css">
+  .red{
+      color: red;
+  }
+  .blue{
+      color: blue;
+  }
+  .pointer{
+      cursor: pointer;
+  }
+  .bigFont {
+    font-size: 30px;
+  }
+  .active{
+
+  }
+  .no-select{
+    user-select:none;
+  }
+</style>

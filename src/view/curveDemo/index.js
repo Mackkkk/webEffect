@@ -6,7 +6,7 @@ import Word from '../../lib/curve/word.js'
 const { Stage, motion } = curvejs
 
 var randomColor = util.randomColor,
-  stage = new Stage(800, 450, '#myCanvas')
+  stage = new Stage(800, 500, '#myCanvas')
 
 function tick() {
   stage.update()
@@ -73,6 +73,48 @@ function tick() {
   stage.add(new Word('y',{
     color: randomColor(),
       x: 78*6,
+      motion: motion.dance,
+      data: {angle: 0, r:4 ,step:Math.PI / 40 }
+  }))
+  stage.add(new Word('O',{
+    color: randomColor(),
+      x: 83*4,
+      y: 160,
+      motion: motion.dance,
+      data: {angle: 0, r:4 ,step:Math.PI / 40 }
+  }))
+  stage.add(new Word('f',{
+    color: randomColor(),
+      x: 82*5,
+      y: 160,
+      motion: motion.dance,
+      data: {angle: 0, r:4 ,step:Math.PI / 40 }
+  }))
+  stage.add(new Word('W',{
+    color: randomColor(),
+      x: 64*6,
+      y: 340,
+      motion: motion.dance,
+      data: {angle: 0, r:4 ,step:Math.PI / 40 }
+  }))
+  stage.add(new Word('o',{
+    color: randomColor(),
+      x: 76*7,
+      y: 340,
+      motion: motion.dance,
+      data: {angle: 0, r:4 ,step:Math.PI / 40 }
+  }))
+  stage.add(new Word('r',{
+    color: randomColor(),
+      x: 78*8,
+      y: 368,
+      motion: motion.dance,
+      data: {angle: 0, r:4 ,step:Math.PI / 40 }
+  }))
+  stage.add(new Word('k',{
+    color: randomColor(),
+      x: 76*9,
+      y: 340,
       motion: motion.dance,
       data: {angle: 0, r:4 ,step:Math.PI / 40 }
   }))
