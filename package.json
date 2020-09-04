@@ -47,7 +47,7 @@
     "html-webpack-plugin": "^3.2.0",
     "html-withimg-loader": "^0.1.16",
     "live-server": "^1.2.0",
-    "node-sass": "^4.9.0",
+    "node-sass": "^4.13.1",
     "optimize-css-assets-webpack-plugin": "^4.0.1",
     "postcss-import": "^11.1.0",
     "postcss-loader": "^2.1.5",
